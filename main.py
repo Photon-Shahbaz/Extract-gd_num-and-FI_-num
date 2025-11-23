@@ -1,5 +1,5 @@
 from selenium import webdriver
-import login, gd, popUp_window, gui
+import login, gd, popUp_window, gui, gd_popup
 
 def psw():
 
@@ -16,6 +16,7 @@ def psw():
     gd.extract_gd(driver)
     new_entries = gd.extract_rows(driver)
     # popUp_window.popup_win(new_entries)
+    gd_popup.extract_from_popup(driver)
     gui.popup_win(new_entries)
 
 
